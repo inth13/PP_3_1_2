@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <style>
+        div.field {
+            padding-bottom: 5px;
+        }
+
+        div.field label {
+            display: block;
+            float: left;
+            width: 70px;
+            height: 15px;
+        }
+    </style>
+    <title>Add User</title>
+</head>
+<body>
+<p>add new user</p>
+<form th:action="@{/new}" th:method="POST" th:object="${user}">
+    <div class="field">
+        <label for="name">Name:</label>
+        <input id="name" th:field="*{name}" type="text"/><br>
+    </div>
+    <div class="field">
+        <label for="surname">Surname:</label>
+        <input id="surname" th:field="*{surname}" type="text"/><br>
+    </div>
+    <div class="field">
+        <input type="submit" value="Create"/>
+    </div>
+</form>
+</body>
+</html>
