@@ -11,7 +11,7 @@ import java.util.List;
 
 @Controller
 public class UserController {
-    final UserService userServiceImpl;
+    private final UserService userServiceImpl;
 
     public UserController(UserService userServiceImpl) {
         this.userServiceImpl = userServiceImpl;
